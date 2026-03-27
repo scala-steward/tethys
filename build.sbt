@@ -74,8 +74,8 @@ def crossScalaSettings = {
 
 lazy val testSettings = Seq(
   libraryDependencies ++= Seq(
-    "org.scalatest" %% "scalatest-flatspec" % "3.2.19" % Test,
-    "org.scalatest" %% "scalatest-shouldmatchers" % "3.2.19" % Test
+    "org.scalatest" %% "scalatest-flatspec" % "3.2.20" % Test,
+    "org.scalatest" %% "scalatest-shouldmatchers" % "3.2.20" % Test
   )
 )
 
