@@ -189,13 +189,7 @@ lazy val enumeratum = project
   .settings(testSettings)
   .settings(
     name := "tethys-enumeratum",
-    libraryDependencies ++= {
-      CrossVersion.partialVersion(scalaVersion.value) match {
-        case Some((2, y)) =>
-          Seq("com.beachape" %% "enumeratum" % "1.9.0")
-        case _ => Seq.empty
-      }
-    }
+    libraryDependencies += "com.beachape" %% "enumeratum" % "1.9.0"
   )
   .dependsOn(core)
 
