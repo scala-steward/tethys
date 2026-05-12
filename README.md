@@ -234,7 +234,7 @@ object UserAccount:
         position: String
    ) extends UserAccount("Employee")
 
-val account: UserAccount = UserAccount.Customer(id = 123, phone = "+12394283293"
+val account: UserAccount = UserAccount.Customer(id = 123, phone = "+12394283293")
 val json = """{"typ": "Customer", "id": 123, "userId": "+12394283293"}"""
 
 json.jsonAs[UserAccount] == Right(account)
@@ -264,6 +264,7 @@ account.asJson == json
    ```
    P.S. There are empty **WriterBuilder** in the examples to simplify demonstration of two approaches. You shouldn't use empty one
 5. **WriterBuilder** features
+
 ```scala
 case class Foo(a: Int, b: String, c: Any, d: Boolean, e: Double)
 
@@ -290,8 +291,8 @@ inline given WriterBuilder[Foo] =
      }
 ```
 6. **ReaderBuilder** features
-```scala
 
+```scala
 inline given ReaderBuilder[Foo] =
   ReaderBuilder[Foo]
     // extract field from a value of a specific type
